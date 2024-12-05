@@ -5,5 +5,5 @@ services:
     env_file:
       - .env
     volumes:
-      - ./playwright-report:/tests/playwright-report
+      - ./playwright-report:/wikipedia-test-task/playwright-report
     entrypoint: ["npx", "playwright", "test", "--reporter=html"]

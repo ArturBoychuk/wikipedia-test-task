@@ -28,7 +28,7 @@ export default defineConfig({
     },
   ],
   reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['html', { outputFolder: '/wikipedia-test-task/playwright-report', open: 'never' }],
   ],
   workers: 1
 })

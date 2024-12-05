@@ -14,18 +14,19 @@ Successful language change in English Wikipedia by an authorized user.
 1. The user is already authorized in their English Wikipedia account.
 
 ### **Test Steps:**  
-1. Navigate to the "Preferences" page.
-2. 
-3. Select a new language (e.g., Ukrainian) from the dropdown menu.
-4. Save the changes.
+1. Click on account icon to open menu.
+2. Navigate to the "Preferences" page.
+3. Scroll down to "Internationalisation" section
+4. Select a new language (e.g., Ukrainian) from the dropdown menu.
+5. Save the changes by click on "Save" button
 
 ### **Expected Results:**
 The interface renders on the selected language.
 
 ### **Postconditions:**
-1. Navigate back to "Preferences."
+1. Scroll down to "Internationalisation" section
 2. Change the language back to the default (English).
-3. Save the changes to ensure the environment is reset to its original state.
+3. Save the changes by click on "Save" button
 
 ---
 
@@ -38,10 +39,17 @@ The interface renders on the selected language.
    ```bash
    gh repo clone ArturBoychuk/wikipedia-test-task
    cd wikipedia-test-task
-3. Create an `.env` file in the root of the project folder to store sensitive information, in particular:
-   - BASE_URL=https://en.wikipedia.org
-   - USER_NAME=<your_username>
-   - PASSWORD=<your_password>
+3. Create an `.env` file in the root of the project folder to store sensitive information by following command:
+   - For Linux and MacOS:
+      ```bash
+      echo -e "BASE_URL=https://en.wikipedia.org\nUSER_NAME=<your_username>\nPASSWORD=<your_password>" > .env
+   - For Windows(was not tested though):
+      ```bash
+      (echo BASE_URL=https://en.wikipedia.org && echo USER_NAME=<your_username> && echo PASSWORD=<your_password>) > .env
+   - As the result you will have such data - plase fill it with your credentials:
+     - BASE_URL=https://en.wikipedia.org
+     - USER_NAME=<your_username>
+     - PASSWORD=<your_password>
 4. Build the Docker Image:
    - Run the following command to build the Docker image for this project:
    ```bash
