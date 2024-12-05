@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  playwright-tests:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./playwright-report:/tests/playwright-report
+    entrypoint: ["npx", "playwright", "test", "--reporter=html"]
